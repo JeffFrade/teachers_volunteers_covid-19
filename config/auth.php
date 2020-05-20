@@ -39,13 +39,7 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
-        ],
-
-        'api' => [
-            'driver' => 'token',
-            'provider' => 'users',
-            'hash' => false,
-        ],
+        ]
     ],
 
     /*
@@ -68,13 +62,8 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
-        ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+            'model' => App\Repositories\Models\User::class,
+        ]
     ],
 
     /*
